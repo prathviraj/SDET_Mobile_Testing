@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="4" passed="0" failed="1" skipped="0">
+<testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-12-24T05:56:38Z" name="Suite" finished-at="2020-12-24T05:57:54Z" duration-ms="76659">
+  <suite started-at="2021-01-08T05:50:34Z" name="Default suite" finished-at="2021-01-08T05:51:43Z" duration-ms="68938">
     <groups>
     </groups>
-    <test started-at="2020-12-24T05:56:38Z" name="Test" finished-at="2020-12-24T05:57:54Z" duration-ms="76659">
+    <test started-at="2021-01-08T05:50:34Z" name="Default test" finished-at="2021-01-08T05:51:43Z" duration-ms="68938">
       <class name="Practice.AppiumFramework.TC_01">
-        <test-method is-config="true" signature="bt()[pri:0, instance:Practice.AppiumFramework.TC_01@5d0bf09b]" started-at="2020-12-24T05:56:38Z" name="bt" finished-at="2020-12-24T05:57:05Z" duration-ms="27503" status="PASS">
+        <test-method is-config="true" signature="bt()[pri:0, instance:Practice.AppiumFramework.TC_01@5d0bf09b]" started-at="2021-01-08T05:50:34Z" name="bt" finished-at="2021-01-08T05:50:48Z" duration-ms="13727" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bt -->
-        <test-method signature="TestCase4()[pri:0, instance:Practice.AppiumFramework.TC_01@5d0bf09b]" started-at="2020-12-24T05:57:05Z" name="TestCase4" finished-at="2020-12-24T05:57:54Z" duration-ms="49118" status="FAIL">
-          <exception class="java.lang.NoSuchMethodError">
-            <message>
-              <![CDATA[org.testng.Assert.assertEquals(DD)V]]>
-            </message>
+        <test-method signature="KATestCase2()[pri:0, instance:Practice.AppiumFramework.TC_01@5d0bf09b]" started-at="2021-01-08T05:50:48Z" name="KATestCase2" finished-at="2021-01-08T05:51:43Z" duration-ms="55161" status="FAIL">
+          <exception class="java.lang.NullPointerException">
             <full-stacktrace>
-              <![CDATA[java.lang.NoSuchMethodError: org.testng.Assert.assertEquals(DD)V
-at Practice.AppiumFramework.TC_01.TestCase4(TC_01.java:180)
+              <![CDATA[java.lang.NullPointerException
+at Practice.AppiumFramework.TC_01.KATestCase2(TC_01.java:63)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -46,11 +43,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NoSuchMethodError -->
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase4 -->
+        </test-method> <!-- KATestCase2 -->
       </class> <!-- Practice.AppiumFramework.TC_01 -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

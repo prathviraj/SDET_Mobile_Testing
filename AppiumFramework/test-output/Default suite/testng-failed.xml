@@ -5,7 +5,7 @@
     <classes>
       <class name="Practice.AppiumFramework.TC_01">
         <methods>
-          <include name="TestCase4"/>
+          <include name="KATestCase2"/>
           <include name="bt"/>
         </methods>
       </class> <!-- Practice.AppiumFramework.TC_01 -->

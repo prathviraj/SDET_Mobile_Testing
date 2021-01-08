@@ -80,13 +80,23 @@ public class Capability {
 		
 		chromedriverExecutable = Pro.getProperty("chromedriverExecutable");
 		
+		//DesiredCapabilities cap = new DesiredCapabilities();
+		//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "prathvi");        
+		//cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
+		//cap.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, "C:\\Users\\PrathvirajMeenkeri\\Desktop\\Prathvi\\IBM Training\\SDET\\Appium\\chromedriver_win32\\chromedriver.exe");
+        //cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
+        //cap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.androidsample.generalstore");        
+        //cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.androidsample.generalstore.SplashActivity");
+        //AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
+        //return driver;
+
 		DesiredCapabilities cap = new DesiredCapabilities();
-		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android prathviraj");        
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME, "prathvi");        
         cap.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
         cap.setCapability(AndroidMobileCapabilityType.CHROMEDRIVER_EXECUTABLE, "C:\\Users\\PrathvirajMeenkeri\\Desktop\\Prathvi\\IBM Training\\SDET\\Appium\\chromedriver_win32\\chromedriver.exe");
         cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.ANDROID_UIAUTOMATOR2);
-        cap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.androidsample.generalstore");        
-        cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.androidsample.generalstore.SplashActivity");
+        cap.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "org.khanacademy.android");        
+        cap.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "org.khanacademy.android.ui.library.MainActivity");
         AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"),cap);
 		return driver;
 

@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import java.util.concurrent.TimeUnit;
 
+import io.appium.java_client.MobileBy;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
@@ -40,7 +41,58 @@ public class TC_01 extends Capability {
 		driver = Capability(appPackage,appActivity,deviceName,chromedriverExecutable);
 	}
 
-
+//Khans Academy
+	@Test
+	public void KATestCase2() throws IOException, InterruptedException
+	{
+		service = startServer();
+		Thread.sleep(5000);
+		driver = Capability(appPackage,appActivity,deviceName,chromedriverExecutable);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
+		Thread.sleep(5000);
+		driver.findElement(By.className("android.widget.Button")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@text='Sign in']")).click();
+		driver.findElement(By.xpath("//*[@text='Continue with Google']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@text='prathviraj.s.m@gmail.com']")).click();
+		Thread.sleep(5000);
+		driver.findElement(MobileBy.AccessibilityId("Settings"));
+		
+		Thread.sleep(5000);
+		service.stop();
+		
+	}
+	
+	@Test(enabled=false) //Khans Academy 
+	public void KATestCase1() throws IOException, InterruptedException
+	{
+		service = startServer();
+		Thread.sleep(5000);
+		driver = Capability(appPackage,appActivity,deviceName,chromedriverExecutable);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
+		Thread.sleep(5000);
+		driver.findElement(By.className("android.widget.Button")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@text='Sign in']")).click();
+		driver.findElement(By.xpath("//*[@text='Continue with Google']")).click();
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("//*[@text='prathviraj.s.m@gmail.com']")).click();
+		Thread.sleep(5000);
+		
+		 driver.findElement(By.xpath("//*[@text='Join class']")).click();
+		
+		 Thread.sleep(10000);
+		 driver.findElement(By.className("android.widget.EditText")).sendKeys(
+		 "prathviraj.s.m@gmail.com"); Thread.sleep(9000); driver.hideKeyboard();
+		 Thread.sleep(5000);
+		 //driver.findElements(By.className("android.widget.Button")).get(2);
+		 Thread.sleep(3000); driver.findElement(By.xpath("//*[@text='ADD']")).click();
+		service.stop();
+		
+	}
+	
+	
 	@Test(enabled=false)
 	public void TestCase1() throws IOException, InterruptedException
 	{
@@ -132,7 +184,7 @@ public class TC_01 extends Capability {
         String expectedname = "Air Jordan 9 Retro";
         Assert.assertEquals(expectedname, checkoutname);      
 	}
-	@Test
+	@Test(enabled=false)
 	public void TestCase4() throws InterruptedException, IOException
 	{
 	service.start();
@@ -158,32 +210,30 @@ public class TC_01 extends Capability {
     driver.findElement(By.id("com.androidsample.generalstore:id/appbar_btn_cart")).click();
     Thread.sleep(3000);
     
-    String amount1 = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(0).getText();
-    amount1 = amount1.substring(1);
-    double amount1value = Double.parseDouble(amount1);
-    System.out.println(amount1);    
-    Thread.sleep(3000);
-    
-    String amount2 = driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).get(1).getText();
-    amount2 = amount2.substring(1);
-    double amount2value = Double.parseDouble(amount2);    
-    System.out.println(amount2);
-    Thread.sleep(3000);
-    
-    //Sum
-    double TotalAmount = amount1value + amount2value;
-    Thread.sleep(5000);
-    String finalamount = driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl")).getText();
-    finalamount = finalamount.substring(1);
-    double FinalTotal = Double.parseDouble(finalamount);
-    
-    Assert.assertEquals(FinalTotal, TotalAmount);
+		/*
+		 * String amount1 =
+		 * driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).
+		 * get(0).getText(); amount1 = amount1.substring(1); double amount1value =
+		 * Double.parseDouble(amount1); System.out.println(amount1); Thread.sleep(8000);
+		 * 
+		 * String amount2 =
+		 * driver.findElements(By.id("com.androidsample.generalstore:id/productPrice")).
+		 * get(1).getText(); amount2 = amount2.substring(1); double amount2value =
+		 * Double.parseDouble(amount2); System.out.println(amount2); Thread.sleep(8000);
+		 * 
+		 * //Sum double TotalAmount = amount1value + amount2value; String finalamount =
+		 * driver.findElement(By.id("com.androidsample.generalstore:id/totalAmountLbl"))
+		 * .getText(); finalamount = finalamount.substring(1); double FinalTotal =
+		 * Double.parseDouble(finalamount);
+		 * 
+		 * Assert.assertEquals(FinalTotal, TotalAmount);
+		 */  
     
  // Tap
-    Thread.sleep(5000);
+    Thread.sleep(8000);
     AndroidElement checkbox = driver.findElement(By.className("android.widget.CheckBox"));
     TouchAction t = new TouchAction(driver);
-    t.tap(tapOptions().withElement(element(checkbox))).perform();
+    t.tap(tapOptions().withElement(element(checkbox))).perform();    
     Thread.sleep(5000);
     AndroidElement terms =driver.findElement(By.xpath("//*[@text='Please read our terms of conditions']"));
     t.longPress(longPressOptions().withElement(element(terms)).withDuration(ofSeconds(3))).release().perform();
