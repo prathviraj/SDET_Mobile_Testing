@@ -42,7 +42,7 @@ public class TC_01 extends Capability {
 	}
 
 //Khans Academy
-	@Test
+	@Test(enabled=false)
 	public void KATestCase2() throws IOException, InterruptedException
 	{
 		service = startServer();
@@ -57,8 +57,7 @@ public class TC_01 extends Capability {
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@text='prathviraj.s.m@gmail.com']")).click();
 		Thread.sleep(5000);
-		driver.findElement(MobileBy.AccessibilityId("Settings"));
-		
+		driver.findElement(MobileBy.AccessibilityId("Settings"));		
 		Thread.sleep(5000);
 		service.stop();
 		
@@ -184,7 +183,7 @@ public class TC_01 extends Capability {
         String expectedname = "Air Jordan 9 Retro";
         Assert.assertEquals(expectedname, checkoutname);      
 	}
-	@Test(enabled=false)
+	@Test
 	public void TestCase4() throws InterruptedException, IOException
 	{
 	service.start();

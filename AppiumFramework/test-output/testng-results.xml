@@ -2,20 +2,20 @@
 <testng-results ignored="5" total="6" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-01-08T05:50:34Z" name="Default suite" finished-at="2021-01-08T05:51:43Z" duration-ms="68938">
+  <suite started-at="2021-01-08T15:11:21Z" name="Default suite" finished-at="2021-01-08T15:11:48Z" duration-ms="26748">
     <groups>
     </groups>
-    <test started-at="2021-01-08T05:50:34Z" name="Default test" finished-at="2021-01-08T05:51:43Z" duration-ms="68938">
+    <test started-at="2021-01-08T15:11:21Z" name="Default test" finished-at="2021-01-08T15:11:48Z" duration-ms="26748">
       <class name="Practice.AppiumFramework.TC_01">
-        <test-method is-config="true" signature="bt()[pri:0, instance:Practice.AppiumFramework.TC_01@5d0bf09b]" started-at="2021-01-08T05:50:34Z" name="bt" finished-at="2021-01-08T05:50:48Z" duration-ms="13727" status="PASS">
+        <test-method is-config="true" signature="bt()[pri:0, instance:Practice.AppiumFramework.TC_01@5d0bf09b]" started-at="2021-01-08T15:11:21Z" name="bt" finished-at="2021-01-08T15:11:48Z" duration-ms="26627" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- bt -->
-        <test-method signature="KATestCase2()[pri:0, instance:Practice.AppiumFramework.TC_01@5d0bf09b]" started-at="2021-01-08T05:50:48Z" name="KATestCase2" finished-at="2021-01-08T05:51:43Z" duration-ms="55161" status="FAIL">
+        <test-method signature="TestCase4()[pri:0, instance:Practice.AppiumFramework.TC_01@5d0bf09b]" started-at="2021-01-08T15:11:48Z" name="TestCase4" finished-at="2021-01-08T15:11:48Z" duration-ms="40" status="FAIL">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-at Practice.AppiumFramework.TC_01.KATestCase2(TC_01.java:63)
+at Practice.AppiumFramework.TC_01.TestCase4(TC_01.java:190)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -46,7 +46,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- KATestCase2 -->
+        </test-method> <!-- TestCase4 -->
       </class> <!-- Practice.AppiumFramework.TC_01 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
